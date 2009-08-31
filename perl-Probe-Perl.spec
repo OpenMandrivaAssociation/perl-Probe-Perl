@@ -1,22 +1,22 @@
-%define realname   Probe-Perl
-%define version    0.01
-%define release    %mkrel 2
+%define upstream_name    Probe-Perl
+%define upstream_version 0.01
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    Information about the currently running perl
-Source:     http://www.cpan.org/modules/by-module/Probe/%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: perl-devel
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Probe/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(Config)
-BuildRequires: perl(Test)
 BuildRequires: perl(Module::Build::Compat)
+BuildRequires: perl(Test)
 
 BuildArch: noarch
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module provides methods for obtaining information about the currently
@@ -24,7 +24,7 @@ running perl interpreter. It originally began life as code in the
 'Module::Build' project, but has been externalized here for general use.
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
