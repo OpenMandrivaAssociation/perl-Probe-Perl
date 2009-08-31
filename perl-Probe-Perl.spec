@@ -1,6 +1,6 @@
 %define realname   Probe-Perl
 %define version    0.01
-%define release    %mkrel 1
+%define release    %mkrel 2
 
 Name:       perl-%{realname}
 Version:    %{version}
