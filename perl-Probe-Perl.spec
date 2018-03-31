@@ -1,14 +1,14 @@
 %define modname	Probe-Perl
-%define modver	0.01
+%define modver	0.03
 
 Summary:	Information about the currently running perl
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	15
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Probe/%{modname}-%{modver}.tar.gz
+Source0:	http://search.cpan.org/CPAN/authors/id/K/KW/KWILLIAMS/Probe-Perl-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Config)
 BuildRequires:	perl(Module::Build::Compat)
