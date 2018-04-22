@@ -4,7 +4,7 @@
 Summary:	Information about the currently running perl
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	1
+Release:	2
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
@@ -12,8 +12,10 @@ Source0:	http://search.cpan.org/CPAN/authors/id/K/KW/KWILLIAMS/Probe-Perl-%{modv
 BuildArch:	noarch
 BuildRequires:	perl(Config)
 BuildRequires:	perl(Module::Build::Compat)
-BuildRequires:	perl(Test)
 BuildRequires:	perl-devel
+# For tests
+BuildRequires:	perl(Test)
+BuildRequires:	perl(Test::More)
 
 %description
 This module provides methods for obtaining information about the currently
