@@ -7,7 +7,7 @@ Version:	%perl_convert_version %{modver}
 Release:	7
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://metacpan.org/pod/Probe::Perl
+Url:		https://metacpan.org/pod/Probe::Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/K/KW/KWILLIAMS/Probe-Perl-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Config)
