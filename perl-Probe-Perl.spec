@@ -1,14 +1,13 @@
 %define modname	Probe-Perl
-%define modver	0.03
 
 Summary:	Information about the currently running perl
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	8
+Version:	0.03
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/Probe::Perl
-Source0:	http://search.cpan.org/CPAN/authors/id/K/KW/KWILLIAMS/Probe-Perl-%{modver}.tar.gz
+Source0:	http://search.cpan.org/CPAN/authors/id/K/KW/KWILLIAMS/Probe-Perl-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Config)
 BuildRequires:	perl(Module::Build::Compat)
@@ -23,20 +22,19 @@ running perl interpreter. It originally began life as code in the
 'Module::Build' project, but has been externalized here for general use.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%setup -qn %{modname}-%{version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
-%make
+%make_build
 
 %check
 make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Changes README
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
-
