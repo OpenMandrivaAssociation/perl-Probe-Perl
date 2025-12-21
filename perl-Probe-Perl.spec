@@ -9,6 +9,7 @@ Group:		Development/Perl
 Url:		https://metacpan.org/pod/Probe::Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/K/KW/KWILLIAMS/Probe-Perl-%{version}.tar.gz
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	perl(Config)
 BuildRequires:	perl(Module::Build::Compat)
 BuildRequires:	perl-devel
